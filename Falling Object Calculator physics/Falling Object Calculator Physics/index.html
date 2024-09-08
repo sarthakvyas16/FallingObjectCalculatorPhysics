@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Fall with air resistance</title>
+  <meta content="Tool für fallende Objekte mit Einberechung der Luftwiderstandskraft" name="Description">
+  <meta content="Fall, Luftwiderstand, Erdbeschleunigung, Gravitationsbeschleunigung, Kraft, Geschwindigkeit, Beschleunigung, Zeit, Grenzgeschwindigkeit, Höhe" name="Keywords">
+  <meta content="Jo" name="Author">
+  <meta content="Copyright © 2018. All rights reserved." name="Copyright">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#00b34d"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="#00b34d" name="msapplication-navbutton-color">
+  <meta content="#00b34d" name="msapplication-TileColor">
+  <meta content="no" name="msapplication-tap-highlight">
+  <link rel="manifest" href="img/manifest.json">
+  <link href="img/apple-icon-76x76.png" rel="shortcut icon">
+  <link href="img/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="img/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="img/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="img/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="img/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="img/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="img/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="img/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="img/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="img/android-icon-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="img/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <meta content="img/ms-icon-144x144.png" name="msapplication-TileImage">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/theme.min.css" rel="stylesheet" type="text/css">
+  <link href="css/material-kit.min.css" rel="stylesheet" type="text/css">
+  <script src="js/calculation.js"></script>
+</head>
+
+<body>
+  <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Fall with air resistance</span>
+      </div>
+
+      <div class="mdl-layout__header-row">
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Content</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#grundlagenSection">Physical Explanations</a>
+        <a class="mdl-navigation__link" href="#inputSection">Input of the Parameters</a>
+        <a class="mdl-navigation__link" href="#outputSection">Calculation and Output</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class="main">
+          <div class="section section-basic">
+            <div class="container">
+              <div>
+                <h2>Falling Objects Under Gravity and Air Resistance<h2>
+              </div>
+              <div id="grundlagenSection">
+                <br>
+                <h3>Physical Explanations</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p>In our atmosphere, air resistance decreases the acceleration due to gravity ("gravitational acceleration") quadratically with increasing fall speed, until a constant terminal velocity is reached. At this maximum speed, the forces of air resistance and gravity are equal in magnitude but opposite in direction, so no further acceleration occurs.</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>This tool calculates the terminal velocity and fall duration. It can display the instantaneous height, velocity, force, and acceleration as a table or as functions in a coordinate system.
+                    <br><br> The calculation requires several specific parameters, which are briefly explained here:</p>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <div id="acordeon">
+                    <div class="panel-group" id="accordion">
+
+                      <div class="panel panel-border panel-default">
+                        <div class="panel-heading" role="tab" id="heading1">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-controls="collapse0">
+                            <h4 class="panel-title">
+                                Masse
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </h4>
+                          </a>
+                        </div>
+                        <div id="collapse0" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <p>The mass (symbol:𝑚) <i>m</i>, kilograms : (kg) Mass is a property of matter and a measure of how strongly an object is influenced by gravitational fields and how much it resists acceleration (inertia: the tendency of an object to remain in its current state of motion unless acted upon by external forces).</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="panel panel-border panel-default">
+                        <div class="panel-heading" role="tab" id="heading4">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                            <h4 class="panel-title">
+                              Cross-Sectional Area
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </h4>
+                          </a>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                            <p>Cross-Sectional Area (symbol: <i>A</i>, Unit: m<sup>2</sup>) is a two-dimensional measure of the size of the area exposed to wind (frontal area in vehicles) of a moving object.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div id="acordeon">
+                    <div class="panel-group" id="accordion">
+
+                      <div class="panel panel-border panel-default">
+                        <div class="panel-heading" role="tab" id="heading3">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-controls="collapse3">
+                            <h4 class="panel-title">
+                              drag coefficient
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </h4>
+                          </a>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <p>The drag coefficient (symbol <i>c<sub>w</sub></i>) or also known as the drag coefficient, is dimensionless and quantifies the aerodynamic efficiency (streamlining) of a shape, i.e., how well the air
+                              can flow past the falling object. The <i>c<sub>w</sub></i>-Typical values for different body shapes are approximately as follows:
+                              <ul class="demo-list-item mdl-list">
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Pinguin: 0.03
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Drop shape (streamlined body): 0.05
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Skydiver (vertical position): 0.1
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Sphere: 0.2 - 0.45
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Skydiver (horizontal position): 0.28
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Smart car: 0.37
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Paraglider: 0.6
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Motorcycle: 0.7
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Human (standing): 0.78
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Truck: 0.8
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Parachute: 0.9 - 1.4
+                                  </span>
+                                </li>
+                                <li class="mdl-list__item">
+                                  <span class="mdl-list__item-primary-content">
+                                    Thin flat plate (perpendicular to the flow): 1.11
+                                  </span>
+                                </li>
+                              </ul>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="panel panel-border panel-default">
+                        <div class="panel-heading" role="tab" id="heading5">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-controls="collapse5">
+                            <h4 class="panel-title">
+                              change in time
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </h4>
+                          </a>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <p>The change in time (symbol Δ<i>t</i>, Unit: s) It represents a "moment," or the time between two calculation steps (time difference). The smaller 
+                              Δ
+                              𝑡
+                              Δt is, the more accurate the result will be. However, with smaller 
+                              Δ
+                              𝑡
+                              Δt, the computational effort and execution time increase due to the larger number of values to be processed.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="inputSection">
+                <br>
+                <br>
+                <br>
+                <div class="title">
+                  <h3>Input of the parameters</h3>
+                  <p>Here are the input fields for the variables previously explained.</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group label-floating">
+                      <label class="control-label">Starting height <i>h</i> in m</label>
+                      <input class="form-control" id="h_input" type="text" pattern="[0-9.]*" maxlength="15" value="6500">
+                    </div>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Mass <i>m</i> in kg</label>
+                      <input class="form-control" id="m_input" type="text" pattern="[0-9.]*" maxlength="15" value="85">
+                    </div>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Drag coefficient <i>c<sub>w</sub></i></label>
+                      <input class="form-control" id="cw_input" type="text" pattern="[0-9.]*" maxlength="15" value="0.3">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group label-floating">
+                      <label class="control-label">Cross-sectional area <i>A</i> in m<sup>2</sup></label>
+                      <input class="form-control" id="A_input" type="text" pattern="[0-9.]*" maxlength="15" value="0.7">
+                    </div>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Time step Δ<i>t</i> in s</label>
+                      <input class="form-control" id="dt_input" type="text" pattern="[0-9.]*" maxlength="15" value="0.1">
+                    </div>
+                    <div class="form-group label-floating">
+                      <label class="control-label">Decimal places after the comma</label>
+                      <input class="form-control" id="dp_input" type="text" pattern="[0-9]*" maxlength="15" value="4">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="checkbox">
+                      <label>
+                          <input checked id="tvmaxCheckbox" name="optionsCheckboxes" type="checkbox">
+                          Calculate the time required to reach terminal velocity
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                          <input checked id="rhoKonstantCheckbox" name="optionsCheckboxes" type="checkbox">
+                          Neglect the change in air density with altitude
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                          <input checked disabled id="inputCheckCheckbox" name="optionsCheckboxes" type="checkbox">
+                          Check the input for correctness
+                        </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="outputSection">
+                <br>
+                <br>
+                <br>
+                <div class="title">
+                  <h3>Calculation and output</h3>
+                  <p>The functions for calculation will also be executed with incorrect input.</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <button class="btn btn-primary" onclick="inputCheck();calcMaxSpeed()" id="show-toast" data-target="#speedOutputModal" data-toggle="modal">Calculate terminal velocity</button>
+                    <br>
+                    <button class="btn btn-primary" onclick="inputCheck();calcTime()" data-target="#timeOutputModal" data-toggle="modal">Calculate fall duration</button>
+                    <br>
+                    <button class="btn btn-primary" onclick="inputCheck();writeTable()" type="button">Output value table</button>
+                    <br>
+                    <button class="btn btn-primary" onclick="inputCheck();plotData()" type="button">Draw coordinate system</button>
+                    <br>
+                    <div id="toast-example" class="mdl-js-snackbar mdl-snackbar">
+                      <div class="mdl-snackbar__text"></div>
+                      <button class="mdl-snackbar__action" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+                <div id="Graph"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="pull-left">
+            <ul>
+              <li>
+                <a href="github">Repo</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="copyright pull-right">
+            2020
+          </nav>
+        </div>
+      </footer>
+    </main>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="speedOutputModal" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button"><i class="material-icons">clear</i></button>
+            <h3 class="modal-title">The terminal velocity</h3>
+          </div>
+          <div class="modal-body">
+            <span id="speed_output"></span>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default btn-simple" onclick="window.location.href='https://https://en.wikipedia.org/wiki/Terminal_velocity'" type="button">More information</button>
+            <button class="btn btn-danger btn-simple" data-dismiss="modal" type="button">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="timeOutputModal" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button"><i class="material-icons">clear</i></button>
+            <h3 class="modal-title">The fall duration</h3>
+          </div>
+          <div class="modal-body">
+            <span id="time_output"></span>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default btn-simple" onclick="window.location.href='https://https://en.wikipedia.org/wiki/Equations_for_a_falling_body'" type="button"></button>
+            <button class="btn btn-danger btn-simple" data-dismiss="modal" type="button">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Core scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/material.min.js"></script>
+  <script src="js/bootstrap-selectpicker.js"></script>
+  <script src="js/plotly-latest.min.js"></script>
+  <script src="js/material-kit.min.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      var snackbarContainer = document.querySelector('#toast-example');
+      var showToastButton = document.querySelector('#show-toast');
+      showToastButton.addEventListener('click', function() {
+        'use strict';
+        var data = {
+          message: 'Input validation performed!'
+        };
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+      });
+    }());
+  </script>
+</body>
+</html>
